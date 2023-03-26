@@ -1,19 +1,17 @@
 <template>
-  <div class="home">
+  <div class="about">
+    ここは、自信の紹介ページです
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Home',
+  name: 'About',
 }
 </script>
 
 <style scoped>
-  .home {
-    width: 100%;
-    height: 20vw;
-  }
+
   @media screen and (max-width:640px) {
   }
 </style>

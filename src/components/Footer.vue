@@ -1,19 +1,18 @@
 <template>
-  <div class="home">
+  <div id="footer" class="footer">
+    ここは、常に見えているフッター部品です
   </div>
 </template>
 
 <script>
+
 export default {
-  name: 'Home',
+  name: 'Footer',
 }
 </script>
 
 <style scoped>
-  .home {
-    width: 100%;
-    height: 20vw;
-  }
+
   @media screen and (max-width:640px) {
   }
 </style>

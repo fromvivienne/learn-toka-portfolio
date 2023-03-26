@@ -1,19 +1,17 @@
 <template>
-  <div class="home">
+  <div class="work">
+    ここは、仕事で携わった成果物を載せるページです。
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Home',
+  name: 'Work',
 }
 </script>
 
 <style scoped>
-  .home {
-    width: 100%;
-    height: 20vw;
-  }
+
   @media screen and (max-width:640px) {
   }
 </style>
