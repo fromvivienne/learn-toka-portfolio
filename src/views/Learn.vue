@@ -2,8 +2,10 @@
   <div class="learn">
     <div class="comment">
       <ol>
+         
         <li>Git Hubを開きます</li>
         <li>「Fetch origin」ってボタンを押下します。</li>
+        <li>推しは生きてる</li>
         <li>変更がある場合、同ボタンが「Pull ...」みたいなボタンになるので、それも押下します。</li>
       </ol>
     </div>
