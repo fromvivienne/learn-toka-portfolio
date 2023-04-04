@@ -1,4 +1,5 @@
 <template>
+  <div class="header-line"></div>
   <Header/>
   <div id="content" class="content">
     <router-view />
@@ -28,6 +29,14 @@ export default {
 <style>
 html {
   height: 100%;
+}
+body {
+  margin: unset;
+}
+.header-line {
+  width: 100%;
+  height: 4px;
+  background-color: chocolate;
 }
   @media screen and (max-width:640px) {
   }
