@@ -16,6 +16,9 @@
       <div class="link home-menu">
         <router-link class="link-text" to="/about">About</router-link>
       </div>
+      <div class="link home-menu">
+        <router-link class="link-text" to="/learn">Learn</router-link>
+      </div>
     </div>
 
     <div class="sns-div">

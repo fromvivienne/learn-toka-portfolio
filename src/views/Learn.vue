@@ -1,32 +1,22 @@
 <template>
   <div class="learn">
-    <div>
-      <span class="warn">※ ここからのページはPCのWebBrowser用のみ用意しますので、スマホのレイアウト崩れは無視しますー</span>
+    <div class="comment">
+      「Fetch origin」ってボタンを押下します。<br>
+      変更がある場合、同ボタンが「Pull ...」みたいなボタンになるので、それも押下します。
     </div>
-    <div class="category-div it-table">
-        <span>
-          IT Learn
-          <a href="/it-learn">
-            <img src="../assets/icons/forward.svg" alt="forward">
-          </a>
-        </span>
+    <img class="img-view" src="../assets/learn/github.gif" alt="">
+    <div class="comment">
+      <ol>
+        <li>VSCodeを開きます。</li>
+        <li>メニューのファイルから、「フォルダーを選択」を押下。</li>
+        <li>ダイアログが開くので、ドキュメントフォルダの「learn-toka-portfolio」を選択</li>
+        <li>メニューのターミナルから、「新しいターミナル」を押下。</li>
+        <li>画面下にターミナルが表示されるので、「npm run serve」を記述してEnterキーを押下</li>
+        <li>起動（色々表示されるのが落ち着いたら）したら、GoogleChromeで、URLに、「http://localhost:8080」を記述して表示</li>
+        <li>画面が起動したらOK！</li>
+      </ol>
     </div>
-    <div class="category-div nft-table">
-      <span>
-        NFT Learn
-        <a href="/nft-learn">
-          <img src="../assets/icons/forward.svg" alt="forward">
-        </a>
-      </span>
-    </div>
-    <div class="category-div music-table">
-      <span>
-        (Comming Soon...) Music Learn
-        <a href="/music-learn">
-          <img src="../assets/icons/forward.svg" alt="forward">
-        </a>
-      </span>
-    </div>
+    <img class="img-view" src="../assets/learn/vscode.gif" alt="">
   </div>
 </template>
 
@@ -41,15 +31,27 @@ export default {
     }
   },
   mounted() {
-    let content = document.getElementById("content");
-    content.style.backgroundImage = 'none';
-    content.style.backgroundColor = 'aliceblue';
   },
   methods: {
   }
 }
 </script>
 <style scoped>
+.learn {
+  width: 40%;
+  background-color: white;
+  margin: 1vw auto;
+}
+.comment {
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  display: table;
+}
+.img-view {
+  width: 35vw;
+  display: table;
+  margin: 0 auto;
+}
   .warn {
     margin-left: 1vw;
   }
