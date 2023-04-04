@@ -1,8 +1,11 @@
 <template>
   <div class="learn">
     <div class="comment">
-      「Fetch origin」ってボタンを押下します。<br>
-      変更がある場合、同ボタンが「Pull ...」みたいなボタンになるので、それも押下します。
+      <ol>
+        <li>Git Hubを開きます</li>
+        <li>「Fetch origin」ってボタンを押下します。</li>
+        <li>変更がある場合、同ボタンが「Pull ...」みたいなボタンになるので、それも押下します。</li>
+      </ol>
     </div>
     <img class="img-view" src="../assets/learn/github.gif" alt="">
     <div class="comment">
