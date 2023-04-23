@@ -13,7 +13,7 @@ export default {
 
 <style scoped>
 .footer {
-  margin: 0 auto;
+  margin: 1vw auto;
   display: table;
   font-size: 0.8em;
 }
