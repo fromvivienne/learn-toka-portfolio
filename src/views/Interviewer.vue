@@ -17,9 +17,6 @@
       </div>
     </div>
     <br>
-    数を一つ追加してみましょう！
-    箱の角を丸くしてみましょう！
-    箱の中に画像を入れてみましょう！
     <div id="modal-bis" class="modal">
       <div class="modal-background" @click="hide"></div>
       <div class="modal-content">

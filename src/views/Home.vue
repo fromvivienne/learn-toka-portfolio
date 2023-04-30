@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="container">
-      <img class="image" src="../assets/gallery/china.jpg" alt="">
+      <img class="image" src="../assets/gallery/ree-fen.jpg" alt="">
       <img class="image" src="../assets/gallery/vanet.jpg" alt="">
     </div>
      
