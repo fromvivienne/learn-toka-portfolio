@@ -25,29 +25,29 @@
     <div id="modal-bis" class="modal">
       <div class="modal-background" @click="hide"></div>
       <div class="modal-content">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <img class="image" src="../assets/gallery/ree-fen.jpg" alt="">
-              </figure>
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img class="image" src="../assets/gallery/ree-fen.jpg" alt="">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-4">作品名</p>
+              </div>
             </div>
-            <div class="card-content">
-              <div class="media">
-                <div class="media-content">
-                  <p class="title is-4">作品名</p>
-                </div>
-              </div>
 
-              <div class="content">
-                ここに画の説明文を入れていけばいいと思います
-                <br>
-                <a>@toka</a>.
-                <a href="#">#art</a> <a href="#">#tag</a>
-                <br>
-                <time datetime="2016-1-1">2023/4/30</time>
-              </div>
+            <div class="content">
+              ここに画の説明文を入れていけばいいと思います
+              <br>
+              <a>@toka</a>.
+              <a href="#">#art</a> <a href="#">#tag</a>
+              <br>
+              <time datetime="2016-1-1">2023/4/30</time>
             </div>
           </div>
+        </div>
       </div>
     </div>
   </div>
@@ -81,7 +81,10 @@ export default {
   border-radius: 10px;
 }
 .is-active {
-  display: flex;
+  display: flex !important;
+}
+.modal {
+  display: none;
 }
 
   @media screen and (max-width:640px) {
