@@ -14,7 +14,12 @@
       <div class="column">
         Fourth column
         <!-- <img src="../assets/gallery/vanet.jpg" alt=""> -->
+        <img src="../assets/gallery/vanet.jpg">
       </div>
+      <div class="column">
+        fifth column
+      </div>
+
     </div>
     <br>
     <div id="modal-bis" class="modal">
@@ -22,6 +27,7 @@
       <div class="modal-content">
         <p class="image is-4by3">
           <img src="https://bulma.io/images/placeholders/1280x960.png" alt="">
+      
         </p>
       </div>
     </div>
@@ -48,10 +54,12 @@ export default {
   margin: 1vw auto 0;
 }
 .column {
-  background-color: beige;
+  background-color: rgba(175, 195, 0, 1.0);
+  color: white;
   margin: 0 10px;
   height: 10vw;
   /* border-radius: 20px; */
+  border-radius: 10px;
 }
 .is-active {
   display: flex;
