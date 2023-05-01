@@ -34,12 +34,12 @@
           <div class="card-content">
             <div class="media">
               <div class="media-content">
-                <p class="title is-4">作品名</p>
+                <p class="title is-4">創作</p>
               </div>
             </div>
 
             <div class="content">
-              ここに画の説明文を入れていけばいいと思います
+              過去に創った創作の一人です。
               <br>
               <a>@toka</a>.
               <a href="#">#art</a> <a href="#">#tag</a>
