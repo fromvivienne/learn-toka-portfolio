@@ -13,9 +13,11 @@ export default {
 
 <style scoped>
 .footer {
-  margin: 1vw auto;
-  display: table;
   font-size: 0.8em;
+  width: 100%;
+  text-align: center;
+  padding: 0.8vw 0;
+  background-color: #fafafa;
 }
 
   @media screen and (max-width:640px) {

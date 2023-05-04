@@ -1,8 +1,8 @@
 <template>
   <div class="home">
     <div class="container">
-      <img class="image" src="../assets/gallery/ree-fen.jpg" alt="">
-      <img class="image" src="../assets/gallery/vanet.jpg" alt="">
+      <img class="image" src="../assets/gallery/1.jpg" alt="">
+      <img class="image" src="../assets/gallery/2.jpg" alt="">
     </div>
      
   </div>
