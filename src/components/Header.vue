@@ -4,21 +4,21 @@
       <img src="../assets/sign_small.png" alt="">
     </div>
     <div class="menu">
-      <div class="link home-menu">
+      <div id="to-home" class="link home-menu">
         <router-link class="link-text" to="/">Home</router-link>
       </div>
-      <div class="link home-menu">
-        <router-link class="link-text" to="/interviewer">Interviewer</router-link>
+      <div id="to-portfolio" class="link home-menu">
+        <router-link class="link-text" to="/portfolio">Portfolio</router-link>
       </div>
-      <div class="link home-menu">
+      <div id="to-work" class="link home-menu">
         <router-link class="link-text" to="/work">Work</router-link>
       </div>
-      <div class="link home-menu">
+      <div id="to-about" class="link home-menu">
         <router-link class="link-text" to="/about">About</router-link>
       </div>
-      <div class="link home-menu">
+      <!-- <div class="link home-menu">
         <router-link class="link-text" to="/learn">Learn</router-link>
-      </div>
+      </div> -->
     </div>
 
     <div class="sns-div">
@@ -63,8 +63,18 @@ export default {
 .link-text {
   color: black;
   text-decoration: none;
-  font-family: 'Fasthand', cursive;
+  font-family: 'Great Vibes', cursive;
   font-size: 1.4em;
+  transition: .3s;
+  padding: 0.2rem 1rem 0;
+  border-radius: 5px;
+}
+.link-text-choice {
+  border-bottom: 3px solid rgb(221, 215, 205);
+}
+.link-text:hover {
+  background-color: rgb(231, 226, 217);
+  color: white;
 }
 .icon {
   width: 2rem;

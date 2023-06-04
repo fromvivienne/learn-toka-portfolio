@@ -7,6 +7,13 @@
 <script>
 export default {
   name: 'Work',
+  mounted() {
+    let eles = document.getElementsByClassName("home-menu");
+    for (let i = 0; i < eles.length; i++) {
+      eles[i].classList.remove("link-text-choice");
+    }
+    document.getElementById("to-work").classList.add("link-text-choice");
+  }
 }
 </script>
 

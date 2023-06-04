@@ -37,7 +37,12 @@ body {
 .header-line {
   width: 100%;
   height: 4px;
-  background-color: chocolate;
+  background-color: #BCA68B;
+}
+.kugiri-line {
+  margin: 2vw auto 0;
+  display: block;
+  width: 30%;
 }
   @media screen and (max-width:640px) {
   }
