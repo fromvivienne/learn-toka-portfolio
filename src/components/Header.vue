@@ -19,6 +19,9 @@
       <!-- <div class="link home-menu">
         <router-link class="link-text" to="/learn">Learn</router-link>
       </div> -->
+      <div id="to-regist" class="link home-menu">
+        <router-link class="link-text" to="/regist">Regist</router-link>
+      </div>
     </div>
 
     <div class="sns-div">
