@@ -35,6 +35,7 @@ export default {
       eles[i].classList.remove("link-text-choice");
     }
     document.getElementById("to-about").classList.add("link-text-choice");
+    document.getElementsByClassName("menu-div")[0].classList.remove("show-menu-div");
   }
 }
 </script>
@@ -84,6 +85,40 @@ export default {
 .profile-content-text {
   color: rgb(108, 104, 104);
 }
-  @media screen and (max-width:640px) {
+@media screen and (max-width:960px) {
+  .profile-content {
+    width: 80%;
+    margin: 2vw auto 0;
   }
+  .profile-content-inner {
+    display: inline-grid;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .profile-content-img {
+    width: 30vw;
+    height: 30vw;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+  .profile-content-msg {
+    width: 100%;
+  }
+  .profile-content-name {
+    font-size: 5vw;
+    line-height: 10vw;
+    width: 100%;
+    text-align: center;
+  }
+  .profile-content-sub {
+    font-size: 3vw;
+    line-height: 5vw;
+    width: 100%;
+    text-align: center;
+  }
+  .profile-content-text {
+    width: 60%;
+    margin: 5vw auto;
+  }
+}
 </style>

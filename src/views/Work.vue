@@ -13,6 +13,7 @@ export default {
       eles[i].classList.remove("link-text-choice");
     }
     document.getElementById("to-work").classList.add("link-text-choice");
+    document.getElementsByClassName("menu-div")[0].classList.remove("show-menu-div");
   }
 }
 </script>

@@ -4,40 +4,49 @@
       <span class="title">Portfolio</span>
     </div>
     <div class="portfolio-contents">
-      <div class="portfolio-images columns is-multiline">
-        <div class="column is-half" v-for="value in contents" :key="value">
-          <div class="portfolio-tag">
+      <div class="portfolio-images columns is-mobile is-multiline">
+        <div class="column is-half" v-for="value in dispContents" :key="value">
+          <div v-if="value.disp == true" class="portfolio-tag">
             <ion-icon name="bookmark-outline"></ion-icon>
             {{ value.tags }}
           </div>
-          <img :src="value.image">
-          <span class="portfolio-title">{{ value.title }}</span>
+          <img v-if="value.disp == true" @click="modalOpen(value.id)" :src="value.requireImage">
+          <span v-if="value.disp == true" class="portfolio-title">{{ value.title }}</span>
         </div>
       </div>
       <div class="portfolio-navi">
         <span class="portfolio-navi-title">カテゴリー</span>
-        <div class="portfolio-navi-tag" v-for="value in contents" :key="value">
-          <ion-icon name="bookmark-outline"></ion-icon>
-          {{ value.tags }}
+        <div class="portfolio-navi-tag" v-for="value in tags" :key="value">
+          <button class="filter-tags-btn" :data-tags="value" @click="filterTags">
+            <ion-icon name="bookmark-outline"></ion-icon>
+            {{ value }}
+          </button>
         </div>
       </div>
     </div>
-    <div id="modal-bis" class="modal">
+    <div id="modal" class="modal">
       <div class="modal-background" @click="hide"></div>
       <div class="modal-content">
+        <div @click="modalClose" class="modal-close">
+          <ion-icon name="close-outline"></ion-icon>
+        </div>
         <div class="card">
           <div class="card-image">
             <figure class="image is-4by3">
-              <img class="modal-image" v-bind:src="imgPath" alt="">
+              <img class="modal-image" v-bind:src="modalImageUrl" alt="">
             </figure>
+          </div>
+          <div class="modal-images">
+            <span v-for="(value, key) in modalImagesUrl" :key="key">
+              <img @click="modalSelectImg" class="modal-images-img" :src="value" alt="">
+            </span>
           </div>
           <div class="card-content">
             <div class="media">
               <div class="media-content">
-                <p class="title is-4">創作</p>
+                <p class="modal-title is-4">{{ modalTitle }}</p>
               </div>
             </div>
-
             <div class="content">
               shasin_no_hensu
               <br>
@@ -55,45 +64,21 @@
 </template>
 
 <script>
-import { getDownloadURL, getStorage, ref } from "firebase/storage";
-import firebase from "../main.js"
-import { collection, getDocs, orderBy, query } from "firebase/firestore";
+import portfoliojson from "../assets/portfolio.json";
 
 export default {
   name: 'Portfolio',
   data() {
     return {
-      imgPath: null,
-      imgList: [],
+      dispContents: [],
       contents: [],
+      tags: [],
+      modalTitle: null,
+      modalImageUrl: null,
+      modalImagesUrl: [],
     }
   },
   beforeMount() {
-    // galleryフォルダからファイル一覧を取得する
-    let lig = [];
-    // 取得した一覧をぐるぐる回す
-    require.context('../assets/gallery-public', true, /\.jpg$/).keys().forEach((key) => {
-      lig.push({
-        key: key.replace(/(\.\/|\.jpg)/g, ''),
-        val: require("../assets/gallery-public/" + key.replace(/(\.\/)/g, '')),
-        cls: 'column-ptn-gallery'
-      });
-    });
-    require.context('../assets/work', true, /\.jpg$/).keys().forEach((key) => {
-      lig.push({
-        key: key.replace(/(\.\/|\.jpg)/g, ''),
-        val: require("../assets/work/" + key.replace(/(\.\/)/g, '')),
-        cls: 'column-ptn-work'
-      });
-    });
-    require.context('../assets/hobby', true, /\.jpg$/).keys().forEach((key) => {
-      lig.push({
-        key: key.replace(/(\.\/|\.jpg)/g, ''),
-        val: require("../assets/hobby/" + key.replace(/(\.\/)/g, '')),
-        cls: 'column-ptn-hobby'
-      });
-    });
-    this.imgList = lig;
   },
   mounted() {
     this.onloadFunc();
@@ -103,51 +88,56 @@ export default {
       eles[i].classList.remove("link-text-choice");
     }
     document.getElementById("to-portfolio").classList.add("link-text-choice");
+    document.getElementsByClassName("menu-div")[0].classList.remove("show-menu-div");
   },
   methods: {
     async onloadFunc() {
-      const q = query(collection(firebase.db, "Portfolio"), orderBy("index"));
-      const querySnapshot = await getDocs(q);
-      const storage = getStorage();
-      for (let doc of querySnapshot.docs) {
-        let docData = doc.data();
-        docData.id = doc.id;
+      let innerTags = [];
+      for (let doc of portfoliojson) {
+        let docData = doc;
+        docData.disp = true;
         if (docData.createdate) {
           const d = new Date(docData.createdate.seconds * 1000);
           docData.createdate = d.getFullYear() + '-' + ("0" + (d.getMonth() + 1)).slice(-2) + '-' + ("0" + d.getDate()).slice(-2);
         }
-        docData.images = [];
-        if (docData.fullpathimages && docData.fullpathimages.length > 0) {
-          for (let path of docData.fullpathimages) {
-            docData.images.push(await this.downloadUrl(storage, path));
-          }
-          docData.image = docData.images[0];
-        }
+        docData.requireImage = require("../assets/images/portfolio/" + docData.image);
+        docData.requireImages = [];
+        docData.images.forEach(x => {
+          docData.requireImages.push(require("../assets/images/portfolio/" + x));
+        });
+        
         this.contents.push(docData);
+        this.dispContents.push(docData);
+        innerTags.push(docData.tags);
       }
+      this.tags = [...new Set(JSON.parse(JSON.stringify(innerTags)))];
     },
-    async downloadUrl(storage, path) {
-      let res = null;
-      await getDownloadURL(ref(storage, path))
-      .then(function(url) {
-        res = url;
-      })
-      .catch((error) => {
-        console.log(error);
+    modalOpen(id) {
+      const modalData = JSON.parse(JSON.stringify(this.contents.find(x => x.id == id)));
+      this.modalTitle = modalData.title;
+      this.modalImageUrl = modalData.requireImage;
+      this.modalImagesUrl = modalData.requireImages;
+      document.getElementById("modal").classList.add("is-active");
+    },
+    modalClose() {
+      document.getElementById("modal").classList.remove("is-active");
+    },
+    modalSelectImg(event) {
+      let target = event.target;
+      Array.from(document.getElementsByClassName("modal-images-img")).forEach(x => x.classList.remove("modal-images-img-select"));
+      this.modalImageUrl = target.src;
+      target.classList.add("modal-images-img-select");
+    },
+    filterTags(event) {
+      console.log(event.target.dataset.tags);
+      this.contents.forEach(x => {
+        if (x.tags == event.target.dataset.tags) {
+          x.disp = true;
+        } else {
+          x.disp = false;
+        }
       });
-      return res;
     },
-    isActiveNum(number) {
-      this.imgPath = require("../assets/gallery/" + number + ".jpg");
-      document.getElementById("modal-bis").classList.add("is-active");
-    },
-    isActivePath(path) {
-      this.imgPath = path;
-      document.getElementById("modal-bis").classList.add("is-active");
-    },
-    hide() {
-      document.getElementById("modal-bis").classList.remove("is-active");
-    }
   }
 }
 </script>
@@ -181,18 +171,6 @@ export default {
 .inner-column {
   height: 100%;
   border-radius: 10px;
-}
-.column-ptn-gallery {
-  background-color: rgba(175, 195, 0, 1.0);
-  color: white;
-}
-.column-ptn-work {
-  background-color: #ffe08a;
-  color: white;
-}
-.column-ptn-hobby {
-  background-color: #7a7a7a;
-  color: white;
 }
 .column img {
   height: 7vw;
@@ -237,12 +215,6 @@ export default {
   display: grid;
   padding: 4px 20px;
 }
-.portfolio-navi-tag {
-  font-size: 1.2rem;
-  border-bottom: 1px solid #b3b3b3;
-  padding: 1vw 0 0.4vw 0.6vw;
-  line-height: 1.6rem;
-}
 .columns {
   margin: unset;
 }
@@ -279,7 +251,81 @@ export default {
   position: relative;
   top: 0.5vw;
 }
+.card {
+  background-color: #edecec;
+}
+.card-image {
+  padding-top: 2vw;
+}
+.card-image img {
+  background-color: white;
+}
+.modal-images {
+  display: inline-flex;
+  margin-top: 3vw;
+}
+.modal-images-img {
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  margin: 0 2vw;
+  border: 1px solid black;
+  background-color: white;
+}
+.modal-images-img-select {
+  border-color: red;
+}
+.modal-title {
+  color: black;
+  font-weight: bold;
+  font-size: 3vw;
+}
+.filter-tags-btn {
+  font-size: 1.2rem;
+  border-bottom: 1px solid #b3b3b3;
+  padding: 1vw 0 0.4vw 0.6vw;
+  line-height: 1.6rem;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 100%;
+  text-align: left;
+  background-color: unset;
+}
 
-  @media screen and (max-width:640px) {
+
+@media screen and (max-width:960px) {
+  .portfolio-contents {
+    width: 100%;
+    margin: 2vw auto;
+    display: inline-block;
   }
+  .portfolio-images {
+    width: 98%;
+  }
+  .column {
+    height: 20vw;
+    margin-bottom: 6vw;
+  }
+  .column img {
+    height: 20vw;
+    width: 80%;
+  }
+  .portfolio-title {
+    left: 8vw;
+    top: 1vw;
+  }
+  .portfolio-navi {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .portfolio-tag {
+    position: absolute;
+    right: 5vw;
+    width: 40%;
+    background-color: #b1b1b1;
+    top: 2px;
+    text-align: center;
+  }
+}
 </style>

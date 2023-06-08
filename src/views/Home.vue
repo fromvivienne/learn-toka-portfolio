@@ -63,6 +63,7 @@ export default {
       eles[i].classList.remove("link-text-choice");
     }
     document.getElementById("to-home").classList.add("link-text-choice");
+    document.getElementsByClassName("menu-div")[0].classList.remove("show-menu-div");
   },
 }
 </script>
@@ -229,6 +230,43 @@ export default {
   transform: scale(1.05);
   opacity: 0.6;
 }
-@media screen and (max-width:640px) {
+@media screen and (max-width:960px) {
+  .container {
+    width: 97%;
+    height: 45vw;
+  }
+  .kugiri-line {
+    width: 60%;
+  }
+  .home-msg-title {
+    margin: 1vw 0 3vw;
+    font-size: 1.4em;
+    font-weight: bold;
+  }
+  .for-work {
+    width: 80%;
+  }
+  .work-tip {
+    margin: 2em auto;
+  }
+  .work-tip-title {
+    margin-left: 10vw;
+  }
+  .work-tip-hr {
+    left: 4rem;
+  }
+  .work-tip-sample-img {
+    width: 20vw;
+    height: 20vw;
+  }
+  .work-tip-back {
+    height: 40vw;
+  }
+  .work-tip-msg {
+    left: 15vw;
+  }
+  .work-tip-btn {
+    right: 15vw;
+  }
 }
 </style>

@@ -90,6 +90,12 @@ export default {
   mounted() {
     this.onloadFunc();
     document.getElementById("regist-img-dialog").style.display = "none";
+    let eles = document.getElementsByClassName("home-menu");
+    for (let i = 0; i < eles.length; i++) {
+      eles[i].classList.remove("link-text-choice");
+    }
+    document.getElementById("to-regist").classList.add("link-text-choice");
+    document.getElementsByClassName("menu-div")[0].classList.remove("show-menu-div");
   },
   methods: {
     async onloadFunc() {

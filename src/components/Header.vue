@@ -16,9 +16,6 @@
       <div id="to-about" class="link home-menu">
         <router-link class="link-text" to="/about">About</router-link>
       </div>
-      <!-- <div class="link home-menu">
-        <router-link class="link-text" to="/learn">Learn</router-link>
-      </div> -->
       <div id="to-regist" class="link home-menu">
         <router-link class="link-text" to="/regist">Regist</router-link>
       </div>
@@ -31,6 +28,29 @@
       <div class="sns-icon">
         <ion-icon class="icon" name="logo-instagram"></ion-icon>
       </div>
+      <div @click="menuDivOpen" class="menu-outline sns-icon">
+        <ion-icon class="icon" name="menu-outline"></ion-icon>
+      </div>
+    </div>
+    <div id="menu-div" class="menu-div">
+      <div @click="menuDivClose" class="menu-div-close">
+        <ion-icon name="close-outline"></ion-icon>
+      </div>
+      <div id="to-home" class="link home-menu">
+        <router-link class="link-text" to="/">Home</router-link>
+      </div>
+      <div id="to-portfolio" class="link home-menu">
+        <router-link class="link-text" to="/portfolio">Portfolio</router-link>
+      </div>
+      <div id="to-work" class="link home-menu">
+        <router-link class="link-text" to="/work">Work</router-link>
+      </div>
+      <div id="to-about" class="link home-menu">
+        <router-link class="link-text" to="/about">About</router-link>
+      </div>
+      <div id="to-regist" class="link home-menu">
+        <router-link class="link-text" to="/regist">Regist</router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -39,6 +59,14 @@
 
 export default {
   name: 'Header',
+  methods: {
+    menuDivOpen() {
+      document.getElementById("menu-div").classList.add("show-menu-div");
+    },
+    menuDivClose() {
+      document.getElementById("menu-div").classList.remove("show-menu-div");
+    }
+  }
 }
 </script>
 
@@ -90,13 +118,83 @@ export default {
   right: 20px;
 }
 .sns-icon {
-  width: 0.6rem;
-  height: 0.6rem;
   display: block;
   color: black;
   margin: 0 1vw;
 }
+.menu-outline {
+  display: none;
+}
+.menu-div {
+  width: 40%;
+  height: 100%;
+  background-color: white;
+  position: fixed;
+  z-index: 999;
+  right: 0;
+  display: none;
+}
 
-  @media screen and (max-width:640px) {
+@media screen and (max-width:960px) {
+  .header {
+    position: relative;
+    display: inline-flex;
+    width: 100%;
   }
+  .menu {
+    display: none;
+  }
+  .icon {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+  .logo {
+    width: unset;
+  }
+  .sns-div {
+    position: absolute;
+    float: right;
+  }
+  .sns-icon {
+    margin: 1vw;
+  }
+  .menu-outline {
+    display: grid;
+  }
+  .home-menu {
+    display: table;
+    margin: 5vw auto;
+  }
+  .link-text {
+    font-size: 2rem;
+  }
+  .logo img {
+    display: block;
+    margin: unset;
+    width: 16vw;
+    height: auto;
+  }
+  .menu-div-close {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    right: 15px;
+  }
+  .menu-div-close ion-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+  .show-menu-div {
+    display: table !important;
+    animation: anim 0.8s;
+  }
+  @keyframes anim {
+    0% {
+      transform: translateX(300px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+}
 </style>

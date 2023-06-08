@@ -28,6 +28,7 @@ export default {
 
 <style>
 @import "../node_modules/bulma/css/bulma.css";
+
 html {
   height: 100%;
 }
@@ -44,6 +45,6 @@ body {
   display: block;
   width: 30%;
 }
-  @media screen and (max-width:640px) {
+  @media screen and (max-width:960px) {
   }
 </style>

@@ -1,20 +1,32 @@
 {
-  "name": "tokafolio",
-  "short_name": "tokafolio",
+  "name": "toka works",
+  "short_name": "toka works",
+  "theme_color":"#E83328",
   "icons": [
     {
-      "src": "./img/icons/icon192.png",
-      "sizes": "192x192",
-      "type": "image/png"
+      "src":"./img/icons/pwa-192.png",
+      "sizes":"192x192",
+      "type":"image/png"
     },
     {
-      "src": "./img/icons/icon60.png",
-      "sizes": "60x60",
-      "type": "image/png"
+      "src":"./img/icons/pwa-512.png",
+      "sizes":"512x512",
+      "type":"image/png"
+    },
+    {
+      "src":"./img/icons/pwa-192.png",
+      "sizes":"192x192",
+      "type":"image/png",
+      "purpose":"maskable"
+    },
+    {
+      "src":"./img/icons/pwa-512.png",
+      "sizes":"512x512",
+      "type":"image/png",
+      "purpose":"maskable"
     }
   ],
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#FFFFFF",
-  "theme_color": "#4a4a4a"
+  "background_color": "#FFFFFF"
 }
