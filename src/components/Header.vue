@@ -1,7 +1,7 @@
 <template>
   <div id="header" class="header">
     <div class="logo">
-      <img src="../assets/sign_small.png" alt="">
+      <img src="../assets/images/parts/sign_small.png" alt="">
     </div>
     <div class="menu">
       <div id="to-home" class="link home-menu">
@@ -10,8 +10,8 @@
       <div id="to-portfolio" class="link home-menu">
         <router-link class="link-text" to="/portfolio">Portfolio</router-link>
       </div>
-      <div id="to-work" class="link home-menu">
-        <router-link class="link-text" to="/work">Work</router-link>
+      <div id="to-works" class="link home-menu">
+        <router-link class="link-text" to="/works">Works</router-link>
       </div>
       <div id="to-about" class="link home-menu">
         <router-link class="link-text" to="/about">About</router-link>
@@ -42,8 +42,8 @@
       <div id="to-portfolio" class="link home-menu">
         <router-link class="link-text" to="/portfolio">Portfolio</router-link>
       </div>
-      <div id="to-work" class="link home-menu">
-        <router-link class="link-text" to="/work">Work</router-link>
+      <div id="to-works" class="link home-menu">
+        <router-link class="link-text" to="/works">Works</router-link>
       </div>
       <div id="to-about" class="link home-menu">
         <router-link class="link-text" to="/about">About</router-link>

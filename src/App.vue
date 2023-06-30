@@ -45,6 +45,6 @@ body {
   display: block;
   width: 30%;
 }
-  @media screen and (max-width:960px) {
-  }
+@media screen and (max-width:960px) {
+}
 </style>

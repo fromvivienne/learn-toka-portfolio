@@ -1,14 +1,17 @@
 <template>
   <div class="portfolio">
     <div class="portfolio-header">
+      <img class="page-header" src="../assets/images/parts/page_header.png" alt="">
       <span class="title">Portfolio</span>
     </div>
     <div class="portfolio-contents">
       <div class="portfolio-images columns is-mobile is-multiline">
         <div class="column is-half" v-for="value in dispContents" :key="value">
           <div v-if="value.disp == true" class="portfolio-tag">
-            <ion-icon name="bookmark-outline"></ion-icon>
-            {{ value.tags }}
+            <span v-for="tagValue in value.tags" :key="tagValue">
+              <ion-icon name="bookmark-outline"></ion-icon>
+              {{ tagValue }}
+            </span>
           </div>
           <img v-if="value.disp == true" @click="modalOpen(value.id)" :src="value.requireImage">
           <span v-if="value.disp == true" class="portfolio-title">{{ value.title }}</span>
@@ -17,7 +20,7 @@
       <div class="portfolio-navi">
         <span class="portfolio-navi-title">カテゴリー</span>
         <div class="portfolio-navi-tag" v-for="value in tags" :key="value">
-          <button class="filter-tags-btn" :data-tags="value" @click="filterTags">
+          <button class="filter-tags-btn" :data-tag="value" @click="filterTags">
             <ion-icon name="bookmark-outline"></ion-icon>
             {{ value }}
           </button>
@@ -108,9 +111,9 @@ export default {
         
         this.contents.push(docData);
         this.dispContents.push(docData);
-        innerTags.push(docData.tags);
+        innerTags = innerTags.concat(docData.tags);
       }
-      this.tags = [...new Set(JSON.parse(JSON.stringify(innerTags)))];
+      this.tags = ["all"].concat([...new Set(JSON.parse(JSON.stringify(innerTags)))]);
     },
     modalOpen(id) {
       const modalData = JSON.parse(JSON.stringify(this.contents.find(x => x.id == id)));
@@ -129,14 +132,17 @@ export default {
       target.classList.add("modal-images-img-select");
     },
     filterTags(event) {
-      console.log(event.target.dataset.tags);
-      this.contents.forEach(x => {
-        if (x.tags == event.target.dataset.tags) {
-          x.disp = true;
-        } else {
-          x.disp = false;
-        }
-      });
+      const tag = event.target.dataset.tag;
+      this.dispContents = [];
+      if (tag == "all") {
+        this.dispContents = [].concat(this.contents);
+      } else {
+        this.contents.forEach(x => {
+          if (x.tags.includes(tag)) {
+            this.dispContents.push(x);
+          }
+        });
+      }
     },
   }
 }
@@ -150,9 +156,15 @@ export default {
 }
 .portfolio-header {
   width: 100%;
-  height: 10vw;
-  background-color: #7a7a7a;
+  height: 12vw;
+  background-color: black; 
   position: relative;
+}
+.page-header {
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .title {
   font-family: 'Great Vibes', cursive;

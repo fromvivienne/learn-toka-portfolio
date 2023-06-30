@@ -3,14 +3,14 @@
     <div class="profile">Profile</div>
     <div class="profile-content">
       <div class="profile-content-inner">
-        <img class="profile-content-img" src="../assets/images/profile/profile1.jpg" alt="">
+        <img class="profile-content-img" src="../assets/images/about/profile.jpg" alt="">
         <div class="profile-content-msg">
           <span class="profile-content-name">Toka</span>
           <span class="profile-content-sub">designer</span>
           <span class="profile-content-text">
-            ****年生まれ/高知出身<br>
+            <b>プロフィール：</b><br>
+            2004年生まれ / 高知出身<br>
             <br>
-            （例えば）<br>
             幼少時代から人物画を好み、そういう関係の高校に進学<br>
             自身のコネクションからの仕事を受けながら、さらなる技術の向上を求め芸術大学進学を目指す。<br>
             <br>
@@ -19,6 +19,10 @@
             20**.**&nbsp;&nbsp;〇〇〇〇〇<br>
             <br>
             自分の強みとかを一言で掛けたら良い締めになる。
+            <br>
+            <br>
+            <b>好きな絵師：</b><br>
+            <p>ヤマコ（HoneyWorks）：<a href="https://twitter.com/yamako2626?s=20" target="_blank">twitter</a></p><br>
           </span>
         </div>
       </div>
@@ -117,8 +121,9 @@ export default {
     text-align: center;
   }
   .profile-content-text {
-    width: 60%;
+    width: 80%;
     margin: 5vw auto;
+    text-align: center;
   }
 }
 </style>

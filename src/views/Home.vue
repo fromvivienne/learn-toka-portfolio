@@ -16,40 +16,40 @@
       </span>
     </div> 
     <img class="kugiri-line" src="../assets/images/parts/line.png" alt="">
-    <div class="for-work">
-      <div class="for-work-inner">
-        <img class="for-work-img" src="../assets/images/home/guitar.jpg" alt="guitar">
-        <div class="for-work-msg">
-          <span class="for-work-msg-title">
+    <div class="for-works">
+      <div class="for-works-inner">
+        <img class="for-works-img" src="../assets/images/home/guitar.jpg" alt="guitar">
+        <div class="for-works-msg">
+          <span class="for-works-msg-title">
             良い感じの殺し文句
           </span>
-          <hr class="for-work-hr">
-          <span class="for-work-msg-msg">
+          <hr class="for-works-hr">
+          <span class="for-works-msg-msg">
             女性デザイナーが作るデザインだからこそ、 女性が好むデザインをご提案できます。<br>
           「Toka designってどんなイメージが作れるの？」「どんな実績があるの？」と気になった方は、ぜひご覧ください。
           </span>
-          <button class="for-work-msg-btn">
-            <router-link class="for-work-msg-btn-link-text" to="/work">Read More</router-link>
+          <button class="for-works-msg-btn">
+            <router-link class="for-works-msg-btn-link-text" to="/works">Read More</router-link>
           </button>
         </div>
       </div>
     </div>
-    <div class="work-tip">
-      <span class="work-tip-title">Works</span>
-      <div class="work-tip-hr"></div>
-      <div class="work-tip-back"></div>
-      <div class="work-tip-sample">
-        <img class="work-tip-sample-img" src="../assets/images/works/87469.jpg" alt="">
-        <img class="work-tip-sample-img" src="../assets/images/works/87466.jpg" alt="">
-        <img class="work-tip-sample-img" src="../assets/images/works/87472.jpg" alt="">
+    <div class="works-tip">
+      <span class="works-tip-title">Works</span>
+      <div class="works-tip-hr"></div>
+      <div class="works-tip-back"></div>
+      <div class="works-tip-sample">
+        <img class="works-tip-sample-img" src="../assets/images/works/87469.jpg" alt="">
+        <img class="works-tip-sample-img" src="../assets/images/works/87466.jpg" alt="">
+        <img class="works-tip-sample-img" src="../assets/images/works/87472.jpg" alt="">
       </div>
-      <div class="work-tip-sample">
-        <img class="work-tip-sample-img" src="../assets/images/works/87475.jpg" alt="">
-        <img class="work-tip-sample-img" src="../assets/images/works/87462.jpg" alt="">
-        <img class="work-tip-sample-img" src="../assets/images/works/guitar.jpg" alt="">
+      <div class="works-tip-sample">
+        <img class="works-tip-sample-img" src="../assets/images/works/87475.jpg" alt="">
+        <img class="works-tip-sample-img" src="../assets/images/works/87462.jpg" alt="">
+        <img class="works-tip-sample-img" src="../assets/images/works/guitar.jpg" alt="">
       </div>
-      <div class="work-tip-msg">"今まで請け負った仕事のサンプル"</div>
-      <router-link class="work-tip-btn" to="/work">作業実績一覧はこちら</router-link>
+      <div class="works-tip-msg">"今まで請け負った仕事のサンプル"</div>
+      <router-link class="works-tip-btn" to="/works">作業実績一覧はこちら</router-link>
     </div>
   </div>
 </template>
@@ -119,42 +119,42 @@ export default {
 }
 .home-msg-msg {
 }
-.for-work {
+.for-works {
   display: block;
   margin: 2vw auto 0;
   width: 40%;
   background-color: #E7E2D9;
   padding: 2vw;
 }
-.for-work-inner {
+.for-works-inner {
   display: inline-flex;
   width: 100%;
 }
-.for-work-img {
+.for-works-img {
   width: 14em;
   height: 14em;
   object-fit: cover;
   margin-right: 2vw;
 }
-.for-work-msg {
+.for-works-msg {
   width: 60%;
   position: relative;
 }
-.for-work-msg-title {
+.for-works-msg-title {
   font-size: 1.6em;
   font-weight: bold;
 }
-.for-work-hr {
+.for-works-hr {
   position: relative;
   width: 40%;
   height: 0.2px;
   margin: 0.8rem 0;
   background-color: #4a4a4a;
 }
-.for-work-msg-msg {
+.for-works-msg-msg {
   font-size: 0.8em;
 }
-.for-work-msg-btn {
+.for-works-msg-btn {
   position: absolute;
   background-color: unset;
   border-style: solid;
@@ -167,18 +167,18 @@ export default {
   width: 7rem;
   height: 2rem;
 }
-.for-work-msg-btn-link-text {
+.for-works-msg-btn-link-text {
   text-decoration: none;
   color: #4a4a4a;
 }
-.work-tip {
+.works-tip {
   display: block;
   margin: 2em auto 5em;
   width: 100%;
   position: relative;
   padding-bottom: 5vw;
 }
-.work-tip-hr {
+.works-tip-hr {
   position: absolute;
   width: 2.5em;
   height: 0.6em;
@@ -187,11 +187,11 @@ export default {
   left: 23rem;
   z-index: -1;
 }
-.work-tip-title {
+.works-tip-title {
   font-size: 2rem;
   margin-left: 20vw;
 }
-.work-tip-back {
+.works-tip-back {
   background-color: #CFCBC6;
   width: 100%;
   height: 28vw;
@@ -199,24 +199,24 @@ export default {
   position: absolute;
   z-index: -1;
 }
-.work-tip-sample {
+.works-tip-sample {
   margin: 0 auto;
   display: table;
 }
-.work-tip-sample-img {
+.works-tip-sample-img {
   width: 14vw;
   height: 14vw;
   object-fit: cover;
   margin: 1.2vw 2.6vw 0;
   border: 1px solid #4a4a4a;
 }
-.work-tip-msg {
+.works-tip-msg {
   position: absolute;
   font-size: 1rem;
   bottom: 1vw;
   left: 25vw;
 }
-.work-tip-btn {
+.works-tip-btn {
   position: absolute;
   text-decoration: none;
   color: white;
@@ -226,7 +226,7 @@ export default {
   right: 25vw;
   transition: .3s;
 }
-.work-tip-btn:hover {
+.works-tip-btn:hover {
   transform: scale(1.05);
   opacity: 0.6;
 }
@@ -243,29 +243,29 @@ export default {
     font-size: 1.4em;
     font-weight: bold;
   }
-  .for-work {
+  .for-works {
     width: 80%;
   }
-  .work-tip {
+  .works-tip {
     margin: 2em auto;
   }
-  .work-tip-title {
+  .works-tip-title {
     margin-left: 10vw;
   }
-  .work-tip-hr {
+  .works-tip-hr {
     left: 4rem;
   }
-  .work-tip-sample-img {
+  .works-tip-sample-img {
     width: 20vw;
     height: 20vw;
   }
-  .work-tip-back {
+  .works-tip-back {
     height: 40vw;
   }
-  .work-tip-msg {
+  .works-tip-msg {
     left: 15vw;
   }
-  .work-tip-btn {
+  .works-tip-btn {
     right: 15vw;
   }
 }
