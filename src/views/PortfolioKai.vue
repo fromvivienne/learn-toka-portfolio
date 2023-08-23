@@ -1,89 +1,116 @@
 <template>
   <div class="portfolio">
-    <div class="portfolio-header">
+    <div class="portfolio-header" style="display: none;">
       <img class="page-header" src="../assets/images/parts/page_header.png" alt="">
       <span class="title">Portfolio</span>
+    </div>
+    {{ $route.params.abc }}
+    <div class="tabs is-centered">
+      <ul>
+        <li class="li-tag li-meta is-active"><a @click="changeDisplay('meta', this)">MetaVerse</a></li>
+        <li class="li-tag li-work"><a @click="changeDisplay('work')">Work</a></li>
+        <li class="li-tag li-nft"><a @click="changeDisplay('nft')">NFT</a></li>
+        <li class="li-tag li-personal"><a @click="changeDisplay('personal')">Personal</a></li>
+      </ul>
     </div>
     <div class="portfolio-contents">
       <div class="portfolio-images columns is-mobile is-multiline">
         <div class="swiper-div">
-          <swiper>
-            <swiper-slide v-for="value in dispContents" :key="value">
+          <swiper class="meta-swiper" style="">
+            <swiper-slide v-for="value in metaContents" :key="value">
               <div v-if="value.disp == true" class="portfolio-title">{{ value.title }}</div>
-              <img v-if="value.disp == true" :src="value.requireImage">
-              <span v-if="value.disp == true" class="portfolio-summary">{{ value.summary }}</span>
+              <div class="info">
+                <div class="sub-info">
+                  <div class="discription">制作年 : {{ value.createyear }}</div>
+                  <div class="tool" v-for="tool in value.tools" :key="tool">
+                    <div><img :src="tool.requiredIcon" alt="">{{ tool.name }}</div>
+                  </div>
+                </div>
+                <div class="summary">{{ value.summary }}</div>
+              </div>
+              <img v-if="value.disp == true && value.ratio == 'tate'" class="img-tate" :src="value.requireImage">
+              <img v-if="value.disp == true && value.ratio == 'yoko'" class="img-yoko" :src="value.requireImage">
+            </swiper-slide>
+          </swiper>
+          <swiper class="work-swiper" style="display: none;">
+            <swiper-slide v-for="value in workContents" :key="value">
+              <div v-if="value.disp == true" class="portfolio-title">{{ value.title }}</div>
+              <div class="info">
+                <div class="sub-info">
+                  <div class="discription">制作年 : {{ value.createyear }}</div>
+                  <div class="tool" v-for="tool in value.tools" :key="tool">
+                    <div><img :src="tool.requiredIcon" alt="">{{ tool.name }}</div>
+                  </div>
+                </div>
+                <div class="summary">{{ value.summary }}</div>
+              </div>
+              <img v-if="value.disp == true && value.ratio == 'tate'" class="img-tate" :src="value.requireImage">
+              <img v-if="value.disp == true && value.ratio == 'yoko'" class="img-yoko" :src="value.requireImage">
+            </swiper-slide>
+          </swiper>
+          <swiper class="nft-swiper" style="display: none;">
+            <swiper-slide v-for="value in nftContents" :key="value">
+              <div v-if="value.disp == true" class="portfolio-title">{{ value.title }}</div>
+              <div class="info">
+                <div class="sub-info">
+                  <div class="discription">制作年 : {{ value.createyear }}</div>
+                  <div class="tool" v-for="tool in value.tools" :key="tool">
+                    <div><img :src="tool.requiredIcon" alt="">{{ tool.name }}</div>
+                  </div>
+                </div>
+                <div class="summary">{{ value.summary }}</div>
+              </div>
+              <img v-if="value.disp == true && value.ratio == 'tate'" class="img-tate" :src="value.requireImage">
+              <img v-if="value.disp == true && value.ratio == 'yoko'" class="img-yoko" :src="value.requireImage">
+            </swiper-slide>
+          </swiper>
+          <swiper class="personal-swiper" style="display: none;">
+            <swiper-slide v-for="value in personalContents" :key="value">
+              <div v-if="value.disp == true" class="portfolio-title">{{ value.title }}</div>
+              <div class="info">
+                <div class="sub-info">
+                  <div class="discription">制作年 : {{ value.createyear }}</div>
+                  <div class="tool" v-for="tool in value.tools" :key="tool">
+                    <div><img :src="tool.requiredIcon" alt="">{{ tool.name }}</div>
+                  </div>
+                </div>
+                <div class="summary">{{ value.summary }}</div>
+              </div>
+              <img v-if="value.disp == true && value.ratio == 'tate'" class="img-tate" :src="value.requireImage">
+              <img v-if="value.disp == true && value.ratio == 'yoko'" class="img-yoko" :src="value.requireImage">
             </swiper-slide>
           </swiper>
         </div>
-        <!-- <div class="column is-half" v-for="value in dispContents" :key="value">
-          <div v-if="value.disp == true" class="portfolio-tag">
-            <span v-for="tagValue in value.tags" :key="tagValue">
-              <ion-icon name="bookmark-outline"></ion-icon>
-              {{ tagValue }}
-            </span>
-          </div>
-          <img v-if="value.disp == true" @click="modalOpen(value.id)" :src="value.requireImage">
-          <span v-if="value.disp == true" class="portfolio-title">{{ value.title }}</span>
-        </div> -->
       </div>
     </div>
-    <!-- <div id="modal" class="modal">
-      <div class="modal-background" @click="hide"></div>
-      <div class="modal-content">
-        <div @click="modalClose" class="modal-close">
-          <ion-icon name="close-outline"></ion-icon>
-        </div>
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img class="modal-image" v-bind:src="modalImageUrl" alt="">
-            </figure>
-          </div>
-          <div class="modal-images">
-            <span v-for="(value, key) in modalImagesUrl" :key="key">
-              <img @click="modalSelectImg" class="modal-images-img" :src="value" alt="">
-            </span>
-          </div>
-          <div class="card-content">
-            <div class="media">
-              <div class="media-content">
-                <p class="modal-title is-4">{{ modalTitle }}</p>
-              </div>
-            </div>
-            <div class="content">
-              shasin_no_hensu
-              <br>
-              <a>@toka</a>.
-              <a href="#">#art</a>
-              <a href="#">#tag</a>
-              <br>
-              <time datetime="2016-1-1">2023/4/30</time>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
   </div>
 </template>
 
 <script>
-import portfoliojson from "../assets/portfolio.json";
+import portfoliojson from "../assets/juken.json";
 
 export default {
-  name: 'Portfolio',
+  name: 'PortfolioKai',
+  props: ['abc'],
   data() {
     return {
-      dispContents: [],
+      metaContents: [],
+      workContents: [],
+      nftContents: [],
+      personalContents: [],
       contents: [],
-      tags: [],
+      tags: ["meta", "work", "nft", "personal"],
       modalTitle: null,
       modalImageUrl: null,
       modalImagesUrl: [],
+      displayTag: "meta",
     }
   },
   beforeMount() {
   },
   mounted() {
+    console.log(this.$route.params)
+
     this.onloadFunc();
 
     let eles = document.getElementsByClassName("home-menu");
@@ -99,18 +126,23 @@ export default {
       for (let doc of portfoliojson) {
         let docData = doc;
         docData.disp = true;
-        if (docData.createdate) {
-          const d = new Date(docData.createdate.seconds * 1000);
-          docData.createdate = d.getFullYear() + '-' + ("0" + (d.getMonth() + 1)).slice(-2) + '-' + ("0" + d.getDate()).slice(-2);
-        }
-        docData.requireImage = require("../assets/images/portfolio/" + docData.image);
+        docData.requireImage = require("../assets/images/juken/" + docData.image);
         docData.requireImages = [];
-        docData.images.forEach(x => {
-          docData.requireImages.push(require("../assets/images/portfolio/" + x));
-        });
+
+        for (let i = 0; i < docData.tools.length; i++) {
+          docData.tools[i].requiredIcon = require("../assets/icons/" + docData.tools[i].icon);
+        }
         
         this.contents.push(docData);
-        this.dispContents.push(docData);
+        if (docData.tags == "meta") {
+          this.metaContents.push(docData);
+        } else if (docData.tags == "work") {
+          this.workContents.push(docData);
+        } else if (docData.tags == "nft") {
+          this.nftContents.push(docData);
+        } else if (docData.tags == "personal") {
+          this.personalContents.push(docData);
+        }
         innerTags = innerTags.concat(docData.tags);
       }
       this.tags = ["all"].concat([...new Set(JSON.parse(JSON.stringify(innerTags)))]);
@@ -144,6 +176,34 @@ export default {
         });
       }
     },
+    changeDisplay(tag) {
+      let litags = document.getElementsByClassName("li-tag");
+      for (let litag of litags) {
+        litag.classList.remove("is-active");
+      }
+      document.getElementsByClassName("li-" + tag)[0].classList.add("is-active");
+      if (tag == "meta") {
+        document.getElementsByClassName("meta-swiper")[0].style.display = "";
+        document.getElementsByClassName("work-swiper")[0].style.display = "none";
+        document.getElementsByClassName("nft-swiper")[0].style.display = "none";
+        document.getElementsByClassName("personal-swiper")[0].style.display = "none";
+      } else if (tag == "work") {
+        document.getElementsByClassName("meta-swiper")[0].style.display = "none";
+        document.getElementsByClassName("work-swiper")[0].style.display = "";
+        document.getElementsByClassName("nft-swiper")[0].style.display = "none";
+        document.getElementsByClassName("personal-swiper")[0].style.display = "none";
+      } else if (tag == "nft") {
+        document.getElementsByClassName("meta-swiper")[0].style.display = "none";
+        document.getElementsByClassName("work-swiper")[0].style.display = "none";
+        document.getElementsByClassName("nft-swiper")[0].style.display = "";
+        document.getElementsByClassName("personal-swiper")[0].style.display = "none";
+      } else if (tag == "personal") {
+        document.getElementsByClassName("meta-swiper")[0].style.display = "none";
+        document.getElementsByClassName("work-swiper")[0].style.display = "none";
+        document.getElementsByClassName("nft-swiper")[0].style.display = "none";
+        document.getElementsByClassName("personal-swiper")[0].style.display = "";
+      } 
+    }
   }
 }
 </script>
@@ -260,7 +320,9 @@ export default {
 .portfolio-title {
   font-weight: bold;
   position: relative;
-  font-size: 3vw;
+  font-size: 4vw;
+  text-align: center;
+  letter-spacing: 7px;
 }
 .portfolio-summary {
   font-size: 2vw;
@@ -315,7 +377,7 @@ export default {
     display: inline-block;
   }
   .portfolio-images {
-    width: 98%;
+    width: 100%;
   }
   .column {
     height: 20vw;
@@ -341,14 +403,43 @@ export default {
     width: 100%;
   }
   .swiper-div {
-    width: 80%;
+    width: 95%;
     margin: 0 auto;
-    height: 95vw;
+    height: 112vw;
   }
-  .swiper-slide img {
+  .img-yoko {
+    display: grid;
     width: 100%;
-    height: 80vw;
     object-fit: cover;
+    margin: 0 auto;
+  }
+  .img-tate {
+    display: grid;
+    height: 105vw;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+  .tabs {
+    margin-bottom: 0;
+  }
+  .is-active {
+    background-color: #70b3ed;
+    border-radius: 5px 5px 0 0;
+    font-weight: bolder;
+  }
+  .info {
+    margin-left: 3vw;
+  }
+  .sub-info {
+    display: inline-flex;
+  }
+  .tool {
+    margin-left: 2vw;
+  }
+  .tool img {
+    width: 3vw;
+    vertical-align: bottom;
+    margin-right: 0.3vw;
   }
 }
 </style>

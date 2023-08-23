@@ -11,7 +11,7 @@ import Iroiro from '../views/Iroiro.vue'
 const routes = [
   { path: '/', name: 'Home', component: Home },
   { path: '/portfolio', name: 'portfolio', component: Portfolio },
-  { path: '/portfoliokai', name: 'portfoliokai', component: PortfolioKai },
+  { path: '/artworks', name: 'artworks', component: PortfolioKai },
   { path: '/works', name: 'works', component: Works },
   { path: '/about', name: 'about', component: About },
   { path: '/regist', name: 'regist', component: Regist },

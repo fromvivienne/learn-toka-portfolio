@@ -11,14 +11,19 @@
             <b>プロフィール：</b><br>
             2004年生まれ / 高知出身<br>
             <br>
-            幼少時代から人物画を好み、そういう関係の高校に進学<br>
-            自身のコネクションからの仕事を受けながら、さらなる技術の向上を求め芸術大学進学を目指す。<br>
+            幼少時代から絵を書く事が好きで、<br>
+            ペンタブでイラストを描くようになってからは、<br>
+            デジタルコンテンツの制作に邁進<br>
             <br>
-            20**.**&nbsp;&nbsp;〇〇〇〇〇<br>
-            20**.**&nbsp;&nbsp;開業<br>
-            20**.**&nbsp;&nbsp;〇〇〇〇〇<br>
+            工業高校総合デザイン科で、個人・チームでの制作を経て<br>
+            自身のコネクションからの仕事を受けながら、<br>
+            さらなる技術の向上を求め進学を目指す。<br>
             <br>
-            自分の強みとかを一言で掛けたら良い締めになる。
+            <br>
+            2020.&nbsp;&nbsp;高知県立高知工業高等学校&nbsp;入学<br>
+            2021.&nbsp;&nbsp;開業（個人制作の仕事請負）<br>
+            2023.&nbsp;&nbsp;オンラインコミュニティスタッフ開始<br>
+            2023.&nbsp;&nbsp;高知県立高知工業高等学校&nbsp;卒業<br>
             <br>
             <br>
             <b>好きな絵師：</b><br>
@@ -45,9 +50,6 @@ export default {
 </script>
 
 <style scoped>
-.about {
-  margin-bottom: 6vw;
-}
 .profile {
   color: black;
   text-decoration: none;
@@ -104,6 +106,7 @@ export default {
     height: 30vw;
     object-fit: cover;
     margin: 0 auto;
+    border: 1px solid black;
   }
   .profile-content-msg {
     width: 100%;
@@ -122,7 +125,7 @@ export default {
   }
   .profile-content-text {
     width: 80%;
-    margin: 5vw auto;
+    margin: 5vw auto 0;
     text-align: center;
   }
 }

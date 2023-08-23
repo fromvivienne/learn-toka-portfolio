@@ -4,21 +4,21 @@
       <div class="link footer-menu-part">
         <router-link class="link-text" to="/">Home</router-link>
       </div>
-      <div class="link footer-menu-part">
+      <!-- <div class="link footer-menu-part">
         <router-link class="link-text" to="/portfolio">Portfolio</router-link>
-      </div>
+      </div> -->
       <div class="link footer-menu-part">
-        <router-link class="link-text" to="/portfoliokai">Portfolio改</router-link>
+        <router-link class="link-text" to="/artworks">Artworks</router-link>
       </div>
-      <div class="link footer-menu-part">
+      <!-- <div class="link footer-menu-part">
         <router-link class="link-text" to="/works">Works</router-link>
-      </div>
+      </div> -->
       <div class="link footer-menu-part">
         <router-link class="link-text" to="/about">About</router-link>
       </div>
-      <div class="link footer-menu-part">
+      <!-- <div class="link footer-menu-part">
         <router-link class="link-text" to="/iroiro">Iroiro</router-link>
-      </div>
+      </div> -->
     </div>
     <div class="footer-corp">
       Toka&nbsp;design&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;透夏デザイン.

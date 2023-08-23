@@ -57,10 +57,6 @@ export default {
       for (let doc of worksjson) {
         let docData = doc;
         docData.disp = true;
-        if (docData.createdate) {
-          const d = new Date(docData.createdate.seconds * 1000);
-          docData.createdate = d.getFullYear() + '-' + ("0" + (d.getMonth() + 1)).slice(-2) + '-' + ("0" + d.getDate()).slice(-2);
-        }
         docData.requireImage = require("../assets/images/works/" + docData.image);
         docData.requireImages = [];
         docData.images.forEach(x => {

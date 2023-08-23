@@ -21,15 +21,15 @@
         <img class="for-works-img" src="../assets/images/home/guitar.jpg" alt="guitar">
         <div class="for-works-msg">
           <span class="for-works-msg-title">
-            良い感じの殺し文句
+            いつまでも愛せる作品を
           </span>
           <hr class="for-works-hr">
           <span class="for-works-msg-msg">
-            女性デザイナーが作るデザインだからこそ、 女性が好むデザインをご提案できます。<br>
-          「Toka designってどんなイメージが作れるの？」「どんな実績があるの？」と気になった方は、ぜひご覧ください。
+            好きなものにひたむきになってきたからこそ、ご提案に添える作品を制作できます。<br>
+            「Toka designってどんなイメージが作れるの？」「どんな実績があるの？」と気になった方は、ぜひご覧ください。
           </span>
           <button class="for-works-msg-btn">
-            <router-link class="for-works-msg-btn-link-text" to="/works">Read More</router-link>
+            <router-link class="for-works-msg-btn-link-text" :to="{ name: 'artworks' }">Read Mores</router-link>
           </button>
         </div>
       </div>
@@ -49,7 +49,7 @@
         <img class="works-tip-sample-img" src="../assets/images/works/guitar.jpg" alt="">
       </div>
       <div class="works-tip-msg">"今まで請け負った仕事のサンプル"</div>
-      <router-link class="works-tip-btn" to="/works">作業実績一覧はこちら</router-link>
+      <router-link class="works-tip-btn" to="/artworks">作業実績一覧はこちら</router-link>
     </div>
   </div>
 </template>

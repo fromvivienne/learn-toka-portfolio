@@ -1,0 +1,352 @@
+[
+  {
+    "id": 1,
+    "createyear": "2023",
+    "image": "mc_set1.png",
+    "summary": "マインクラフトで制作しているメタバース空間",
+    "tags": "meta",
+    "ratio": "tate",
+    "title": "Meta Verse",
+    "tools": [ { "icon": "mc.png", "name": "Minecraft java" } ]
+  },
+  {
+    "id": 2,
+    "createyear": "2023",
+    "image": "mc_set2.png",
+    "summary": "マインクラフトで制作しているメタバース空間",
+    "tags": "meta",
+    "ratio": "tate",
+    "title": "Meta Verse",
+    "tools": [ { "icon": "mc.png", "name": "Minecraft java" } ]
+  },
+  {
+    "id": 3,
+    "createyear": "2023",
+    "image": "mc_set3.png",
+    "summary": "マインクラフトで制作しているメタバース空間",
+    "tags": "meta",
+    "ratio": "tate",
+    "title": "Meta Verse",
+    "tools": [ { "icon": "mc.png", "name": "Minecraft java" } ]
+  },
+  {
+    "id": 4,
+    "createyear": "2023",
+    "image": "mc_set4.png",
+    "summary": "マインクラフトで制作しているメタバース空間",
+    "tags": "meta",
+    "ratio": "tate",
+    "title": "Meta Verse",
+    "tools": [ { "icon": "mc.png", "name": "Minecraft java" } ]
+  },
+  {
+    "id": 5,
+    "createyear": "2023",
+    "image": "mc_set5.png",
+    "summary": "マインクラフトで制作しているメタバース空間",
+    "tags": "meta",
+    "ratio": "tate",
+    "title": "Meta Verse",
+    "tools": [ { "icon": "mc.png", "name": "Minecraft java" } ]
+  },
+  {
+    "id": 6,
+    "createyear": "2023",
+    "image": "mc_set6.png",
+    "summary": "マインクラフトで制作しているメタバース空間",
+    "tags": "meta",
+    "ratio": "tate",
+    "title": "Meta Verse",
+    "tools": [ { "icon": "mc.png", "name": "Minecraft java" } ]
+  },
+  {
+    "id": 7,
+    "createyear": "2023",
+    "image": "mc_set7.png",
+    "summary": "マインクラフトで制作しているメタバース空間",
+    "tags": "meta",
+    "ratio": "tate",
+    "title": "Meta Verse",
+    "tools": [ { "icon": "mc.png", "name": "Minecraft java" } ]
+  },
+  {
+    "id": 1,
+    "createyear": "2022",
+    "image": "kinenshiseisaku.jpg",
+    "summary": "高校の創立記念式用に制作したパンフレット",
+    "tags": "work",
+    "ratio": "tate",
+    "title": "グループワーク",
+    "tools": [ { "icon": "cs.png", "name": "Clip Studio" }, { "icon": "ai.png", "name": "Adobe Illustrator" } ]
+  },
+  {
+    "id": 1,
+    "createyear": "2023",
+    "image": "melt.jpg",
+    "summary": "高校の卒業制作に向けたグループワーク作品",
+    "tags": "work",
+    "ratio": "tate",
+    "title": "グループワーク",
+    "tools": [ { "icon": "cs.png", "name": "Clip Studio" }, { "icon": "ai.png", "name": "Adobe Illustrator" } ]
+  },
+  {
+    "id": 1,
+    "createyear": "2023",
+    "image": "groupwork1.jpg",
+    "summary": "高校の卒業制作に向けたグループワーク作品",
+    "tags": "work",
+    "ratio": "tate",
+    "title": "グループワーク",
+    "tools": [ { "icon": "cs.png", "name": "Clip Studio" }, { "icon": "ai.png", "name": "Adobe Illustrator" } ]
+  },
+  {
+    "id": 1,
+    "createyear": "2023",
+    "image": "groupwork2.jpg",
+    "summary": "高校の卒業制作に向けたグループワーク作品",
+    "tags": "work",
+    "ratio": "tate",
+    "title": "グループワーク",
+    "tools": [ { "icon": "cs.png", "name": "Clip Studio" }, { "icon": "ai.png", "name": "Adobe Illustrator" } ]
+  },
+  {
+    "id": 1,
+    "createyear": "2022",
+    "image": "koten.jpg",
+    "summary": "高知県展に向けた個人製作のポスター",
+    "tags": "work",
+    "ratio": "tate",
+    "title": "個展 告知のポスター",
+    "tools": [ { "icon": "cs.png", "name": "Clip Studio" }, { "icon": "ai.png", "name": "Adobe Illustrator" } ]
+  },
+  {
+    "id": 1,
+    "createyear": "2023",
+    "image": "cyber1.png",
+    "summary": "NFT用に描いた作品",
+    "tags": "nft",
+    "ratio": "tate",
+    "title": "Cyber",
+    "tools": [ { "icon": "cs.png", "name": "Clip Studio" }, { "icon": "ai.png", "name": "Adobe Illustrator" } ]
+  },
+  {
+    "id": 2,
+    "createyear": "2023",
+    "image": "cyber2.png",
+    "summary": "NFT用に描いた作品",
+    "tags": "nft",
+    "ratio": "tate",
+    "title": "Cyber",
+    "tools": [ { "icon": "cs.png", "name": "Clip Studio" }, { "icon": "ai.png", "name": "Adobe Illustrator" } ]
+  },
+  {
+    "id": 3,
+    "createyear": "2023",
+    "image": "cyber3.png",
+    "summary": "NFT用に描いた作品",
+    "tags": "nft",
+    "ratio": "tate",
+    "title": "Cyber",
+    "tools": [ { "icon": "cs.png", "name": "Clip Studio" }, { "icon": "ai.png", "name": "Adobe Illustrator" } ]
+  },
+  {
+    "id": 4,
+    "createyear": "2023",
+    "image": "cyber4.png",
+    "summary": "NFT用に描いた作品",
+    "tags": "nft",
+    "ratio": "tate",
+    "title": "Cyber",
+    "tools": [ { "icon": "cs.png", "name": "Clip Studio" }, { "icon": "ai.png", "name": "Adobe Illustrator" } ]
+  },
+  {
+    "id": 5,
+    "createyear": "2023",
+    "image": "cyber5.png",
+    "summary": "NFT用に描いた作品",
+    "tags": "nft",
+    "ratio": "tate",
+    "title": "Cyber",
+    "tools": [ { "icon": "cs.png", "name": "Clip Studio" }, { "icon": "ai.png", "name": "Adobe Illustrator" } ]
+  },
+  {
+    "id": 1,
+    "createyear": "2023",
+    "image": "radao.png",
+    "summary": "高校の卒業制作に向けた個人製作作品",
+    "tags": "work",
+    "ratio": "tate",
+    "title": "Editorial Design 1",
+    "tools": [ { "icon": "cs.png", "name": "Clip Studio" }, { "icon": "ai.png", "name": "Adobe Illustrator" } ]
+  },
+  {
+    "id": 6,
+    "createyear": "2023",
+    "image": "harumaki1-1.jpg",
+    "summary": "高校の卒業制作に向けた個人製作作品",
+    "tags": "work",
+    "ratio": "tate",
+    "title": "Editorial Design 2",
+    "tools": [ { "icon": "cs.png", "name": "Clip Studio" }, { "icon": "ai.png", "name": "Adobe Illustrator" } ]
+  },
+  {
+    "id": 6,
+    "createyear": "2023",
+    "image": "harumaki1-2.jpg",
+    "summary": "高校の卒業制作に向けた個人製作作品",
+    "tags": "work",
+    "ratio": "tate",
+    "title": "Editorial Design 2",
+    "tools": [ { "icon": "cs.png", "name": "Clip Studio" }, { "icon": "ai.png", "name": "Adobe Illustrator" } ]
+  },
+  {
+    "id": 7,
+    "createyear": "2023",
+    "image": "harumaki2-1.jpg",
+    "summary": "高校の卒業制作に向けた個人製作作品",
+    "tags": "work",
+    "ratio": "tate",
+    "title": "Editorial Design 2",
+    "tools": [ { "icon": "cs.png", "name": "Clip Studio" }, { "icon": "ai.png", "name": "Adobe Illustrator" } ]
+  },
+  {
+    "id": 7,
+    "createyear": "2023",
+    "image": "harumaki2-2.jpg",
+    "summary": "高校の卒業制作に向けた個人製作作品",
+    "tags": "work",
+    "ratio": "tate",
+    "title": "Editorial Design 2",
+    "tools": [ { "icon": "cs.png", "name": "Clip Studio" }, { "icon": "ai.png", "name": "Adobe Illustrator" } ]
+  },
+  {
+    "id": 8,
+    "createyear": "2023",
+    "image": "nft2.png",
+    "summary": "NFT用に描いた作品",
+    "tags": "nft",
+    "ratio": "tate",
+    "title": "for NFT",
+    "tools": [ { "icon": "cs.png", "name": "Clip Studio" }, { "icon": "ai.png", "name": "Adobe Illustrator" } ]
+  },
+  {
+    "id": 9,
+    "createyear": "2023",
+    "image": "nft4.png",
+    "summary": "NFT用に描いた作品",
+    "tags": "nft",
+    "ratio": "tate",
+    "title": "for NFT",
+    "tools": [ { "icon": "cs.png", "name": "Clip Studio" }, { "icon": "ai.png", "name": "Adobe Illustrator" } ]
+  },
+  {
+    "id": 10,
+    "createyear": "2023",
+    "image": "nft5.png",
+    "summary": "NFT用に描いた作品",
+    "tags": "nft",
+    "ratio": "tate",
+    "title": "for NFT",
+    "tools": [ { "icon": "cs.png", "name": "Clip Studio" }, { "icon": "ai.png", "name": "Adobe Illustrator" } ]
+  },
+  {
+     "id": 11,
+    "createyear": "2023",
+    "image": "nft12.png",
+    "summary": "NFT用に描いた作品",
+    "tags": "nft",
+    "ratio": "tate",
+    "title": "for NFT",
+    "tools": [ { "icon": "cs.png", "name": "Clip Studio" }, { "icon": "ai.png", "name": "Adobe Illustrator" } ]
+  },
+  {
+    "id": 12,
+    "createyear": "2023",
+    "image": "pickcase.png",
+    "summary": "お世話になった方への贈呈用に描いた作品",
+    "tags": "personal",
+    "ratio": "tate",
+    "title": "Pickcase",
+    "tools": [ { "icon": "cs.png", "name": "Clip Studio" }, { "icon": "ai.png", "name": "Adobe Illustrator" } ]
+  },
+  {
+    "id": 13,
+    "createyear": "2023",
+    "image": "tulip.png",
+    "summary": "NFT用に描いた作品",
+    "tags": "nft",
+    "ratio": "tate",
+    "title": "Tulip",
+    "tools": [ { "icon": "cs.png", "name": "Clip Studio" }, { "icon": "ai.png", "name": "Adobe Illustrator" } ]
+  },
+  {
+    "id": 14,
+    "createyear": "2021",
+    "image": "vanet1.jpg",
+    "summary": "趣味用に描いた作品",
+    "tags": "personal",
+    "ratio": "tate",
+    "title": "Vanet",
+    "tools": [ { "icon": "cs.png", "name": "Clip Studio" }, { "icon": "ai.png", "name": "Adobe Illustrator" } ]
+  },
+  {
+    "id": 17,
+    "createyear": "2022",
+    "image": "vanet3.jpg",
+    "summary": "趣味用に描いた作品",
+    "tags": "personal",
+    "ratio": "yoko",
+    "title": "vanet",
+    "tools": [ { "icon": "cs.png", "name": "Clip Studio" }, { "icon": "ai.png", "name": "Adobe Illustrator" } ]
+  },
+  {
+    "id": 15,
+    "createyear": "2023",
+    "image": "vanet2.png",
+    "summary": "趣味用に描いた作品",
+    "tags": "personal",
+    "ratio": "tate",
+    "title": "Vanet",
+    "tools": [ { "icon": "cs.png", "name": "Clip Studio" }, { "icon": "ai.png", "name": "Adobe Illustrator" } ]
+  },
+  {
+    "id": 16,
+    "createyear": "2022",
+    "image": "toka_gtr.jpg",
+    "summary": "クライアントから依頼された作品",
+    "tags": "work",
+    "ratio": "tate",
+    "title": "Guitar",
+    "tools": [ { "icon": "cs.png", "name": "Clip Studio" }, { "icon": "ai.png", "name": "Adobe Illustrator" } ]
+  },
+  {
+    "id": 17,
+    "createyear": "2021",
+    "image": "reefen_personal.jpg",
+    "summary": "趣味用に描いた作品",
+    "tags": "personal",
+    "ratio": "yoko",
+    "title": "personal",
+    "tools": [ { "icon": "cs.png", "name": "Clip Studio" }, { "icon": "ai.png", "name": "Adobe Illustrator" } ]
+  },
+  {
+    "id": 17,
+    "createyear": "2022",
+    "image": "personal5.jpg",
+    "summary": "趣味用に描いた作品",
+    "tags": "personal",
+    "ratio": "yoko",
+    "title": "personal",
+    "tools": [ { "icon": "cs.png", "name": "Clip Studio" }, { "icon": "ai.png", "name": "Adobe Illustrator" } ]
+  },
+  {
+    "id": 17,
+    "createyear": "2023",
+    "image": "personal6.jpg",
+    "summary": "趣味用に描いた作品",
+    "tags": "personal",
+    "ratio": "tate",
+    "title": "personal",
+    "tools": [ { "icon": "cs.png", "name": "Clip Studio" }, { "icon": "ai.png", "name": "Adobe Illustrator" } ]
+  }
+]

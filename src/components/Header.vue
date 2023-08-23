@@ -7,27 +7,24 @@
       <div id="to-home" class="link home-menu">
         <router-link class="link-text" to="/">Home</router-link>
       </div>
-      <div id="to-portfolio" class="link home-menu">
+      <!-- <div id="to-portfolio" class="link home-menu">
         <router-link class="link-text" to="/portfolio">Portfolio</router-link>
-      </div>
-      <div id="to-works" class="link home-menu">
-        <router-link class="link-text" to="/works">Works</router-link>
+      </div> -->
+      <div class="link footer-menu-part">
+        <router-link class="link-text" to="/artworks">Artworks</router-link>
       </div>
       <div id="to-about" class="link home-menu">
         <router-link class="link-text" to="/about">About</router-link>
       </div>
-      <div id="to-regist" class="link home-menu">
-        <router-link class="link-text" to="/regist">Regist</router-link>
-      </div>
     </div>
 
     <div class="sns-div">
-      <div class="sns-icon">
+      <!-- <div class="sns-icon">
         <ion-icon class="icon" name="logo-twitter"></ion-icon>
       </div>
       <div class="sns-icon">
         <ion-icon class="icon" name="logo-instagram"></ion-icon>
-      </div>
+      </div> -->
       <div @click="menuDivOpen" class="menu-outline sns-icon">
         <ion-icon class="icon" name="menu-outline"></ion-icon>
       </div>
@@ -39,17 +36,14 @@
       <div id="to-home" class="link home-menu">
         <router-link class="link-text" to="/">Home</router-link>
       </div>
-      <div id="to-portfolio" class="link home-menu">
+      <!-- <div id="to-portfolio" class="link home-menu">
         <router-link class="link-text" to="/portfolio">Portfolio</router-link>
-      </div>
-      <div id="to-works" class="link home-menu">
-        <router-link class="link-text" to="/works">Works</router-link>
+      </div> -->
+      <div id="to-portfolio" class="link home-menu">
+        <router-link class="link-text" to="/artworks">Artworks</router-link>
       </div>
       <div id="to-about" class="link home-menu">
         <router-link class="link-text" to="/about">About</router-link>
-      </div>
-      <div id="to-regist" class="link home-menu">
-        <router-link class="link-text" to="/regist">Regist</router-link>
       </div>
     </div>
   </div>
@@ -145,8 +139,8 @@ export default {
     display: none;
   }
   .icon {
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 2.5rem;
+    height: 2.5rem;
   }
   .logo {
     width: unset;
@@ -154,6 +148,8 @@ export default {
   .sns-div {
     position: absolute;
     float: right;
+    top: 5px;
+    right: 10px;
   }
   .sns-icon {
     margin: 1vw;

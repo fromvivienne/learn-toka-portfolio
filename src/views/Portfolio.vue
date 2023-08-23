@@ -99,10 +99,6 @@ export default {
       for (let doc of portfoliojson) {
         let docData = doc;
         docData.disp = true;
-        if (docData.createdate) {
-          const d = new Date(docData.createdate.seconds * 1000);
-          docData.createdate = d.getFullYear() + '-' + ("0" + (d.getMonth() + 1)).slice(-2) + '-' + ("0" + d.getDate()).slice(-2);
-        }
         docData.requireImage = require("../assets/images/portfolio/" + docData.image);
         docData.requireImages = [];
         docData.images.forEach(x => {
